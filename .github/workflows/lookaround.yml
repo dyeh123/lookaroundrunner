@@ -28,7 +28,7 @@ jobs:
           # echo "shh only dreams"
           # sleep 1200
       - name: upload
-      - uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: screenshots
           path: /screenshots
