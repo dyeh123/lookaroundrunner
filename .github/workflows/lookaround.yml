@@ -22,8 +22,11 @@ jobs:
           sudo treehouses sshkey github adduser jlkwong
           sudo treehouses sshkey github adduser dyeh123
           sudo npm i -g capture-website-cli --unsafe-perm=true
-          capture-website https://dev.planetfarms.io/login --output=./screenshots/login.png
-          capture-website https://dev.planetfarms.io/register --output=./screenshots/register.png
+          mkdir screenshots
+          cd /screenshots
+          capture-website https://dev.planetfarms.io/login --output=login.png
+          capture-website https://dev.planetfarms.io/register --output=register.png
+          cd ..
           sync
           # echo "shh only dreams"
           # sleep 1200
@@ -31,5 +34,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: screenshots
-          path: ./screenshots
+          path: /screenshots
 
