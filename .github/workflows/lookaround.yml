@@ -22,7 +22,9 @@ jobs:
           sudo treehouses sshkey github adduser jlkwong
           sudo treehouses sshkey github adduser dyeh123
           sudo npm i -g capture-website-cli --unsafe-perm=true
-          capture-website --help
+          capture-website https://dev.planetfarms.io/login --output=login.png
+          capture-website https://dev.planetfarms.io/register --output=register.png
+          sync
           echo "shh only dreams"
           sleep 1200
             
